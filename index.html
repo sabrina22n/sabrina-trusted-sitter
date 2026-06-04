@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sabrina — Trusted Housesitter Application</title>
+        <!-- Fonts: serif, sans and cursive -->
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="brand">Sabrina Nunez — Pet Carer</h1>
+            <nav class="nav">
+                <a href="#about">Sobre mí</a>
+                <a href="#pets">Mascotas</a>
+                <a href="#voluntariados">Voluntariados</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <!-- big background image to make the hero more visual -->
+            <div class="hero-bg" style="background-image:url('photos/home/IMG_2576.jpeg')" aria-hidden="true"></div>
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <h2 class="display">Find your perfect match — <span class="script">Pet care you can trust</span></h2>
+                    <p class="lead">Profesional y cariñosa con mascotas de todas las edades. Experiencia en cuidados diarios, alojamiento y acompañamiento en viajes.</p>
+                    <div class="hero-ctas">
+                        <a class="btn primary" href="#pets">Ver mis mascotas</a>
+                        <a class="btn ghost" href="#voluntariados">Ver voluntariados</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div id="hero-carousel" class="carousel">
+                        <img src="photos/home/IMG_8207.jpeg" alt="home photo 1">
+                        <img src="photos/home/IMG_8357.jpeg" alt="home photo 2">
+                        <img src="photos/home/IMG_4787.jpeg" alt="home photo 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about container">
+            <div class="about-inner">
+                <div class="about-photo">
+                    <img src="photos/me/34360031.JPG" alt="Sabrina" />
+                </div>
+                <div class="about-copy">
+                    <h3>Sobre mí</h3>
+                    <p>Soy Sabrina, cuidadora de mascotas con años de experiencia atendiendo perros, gatos y animales en voluntariados. Responsable, puntual y con mucha paciencia. Me encanta conocer cada personalidad y adaptarme a las rutinas de cada hogar.</p>
+                    <ul>
+                        <li>Cuidados diarios y paseo</li>
+                        <li>Administración de medicación básica</li>
+                        <li>Experiencia con animales nerviosos o mayores</li>
+                        <li>Voluntariados en granjas y santuarios</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="pets" class="pets container">
+            <h3>Las mascotas que he cuidado</h3>
+            <p class="muted">Haz click en una tarjeta para ver más fotos o videos.</p>
+            <div id="pet-list" class="pet-list">
+                <!-- Pet cards inserted by JS -->
+            </div>
+        </section>
+
+        <section id="voluntariados" class="voluntariados container">
+            <h3>Voluntariados</h3>
+            <div class="vol-grid">
+                <article class="vol-item">
+                    <img src="photos/voluntariados/granja-escuela/IMG_1355.jpeg" alt="Granja escuela">
+                    <h4>Granja Escuela</h4>
+                    <p>Trabajé en cuidado de animales y actividades educativas con niños.</p>
+                </article>
+                <article class="vol-item">
+                    <img src="photos/voluntariados/hipica/IMG_6453.jpeg" alt="Hipica">
+                    <h4>Hípica</h4>
+                    <p>Apoyo en manejo y cuidados de caballos, limpieza y alimentación.</p>
+                </article>
+                <article class="vol-item">
+                    <img src="photos/voluntariados/santuario-lacandela/IMG_8242.jpeg" alt="Santuario Lacandela">
+                    <h4>Santuario Lacandela</h4>
+                    <p>Atención a animales rescatados, limpieza de instalaciones y apoyo sanitario básico.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact container">
+            <h3>Contacto</h3>
+            <p>Puedes contactarme por email: <a href="mailto:sabrina@example.com">sabrina@example.com</a> — o por teléfono: <strong>+44 7700 900123</strong></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">© Sabrina Nunez — Pet Carer</div>
+    </footer>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button id="close-lightbox" class="lightbox-close">✕</button>
+        <div class="lightbox-content"></div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
