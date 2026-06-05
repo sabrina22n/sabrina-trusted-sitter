@@ -102,6 +102,40 @@ const merlinaPhotos = [
   'photos/merlina/d1ca7e4f-0e14-4c66-a413-167a6200927e.jpg',
 ];
 
+const candidaMedia = [
+  'photos/voluntariados/santuario-lacandela/IMG_8354.jpeg',
+  'photos/voluntariados/santuario-lacandela/IMG_8242.jpeg',
+  'photos/voluntariados/santuario-lacandela/IMG_8263.jpeg',
+  'photos/voluntariados/santuario-lacandela/IMG_8293.jpeg',
+  'photos/voluntariados/santuario-lacandela/IMG_8304.jpeg',
+  'photos/voluntariados/santuario-lacandela/IMG_8348.JPG',
+  'photos/voluntariados/santuario-lacandela/IMG_8397.jpeg',
+  'photos/voluntariados/santuario-lacandela/IMG_8444.jpeg',
+  'photos/voluntariados/santuario-lacandela/IMG_8480.JPG',
+  'photos/voluntariados/santuario-lacandela/D899F161-7DF4-4C5F-BE75-8D950493DADB_D41A13C6-EDD5-4944-97EE-309E647D8C4E.jpg',
+];
+
+const granjaMedia = [
+  'photos/voluntariados/granja-escuela/IMG_1399.jpeg',
+  'photos/voluntariados/granja-escuela/IMG_1355.jpeg',
+  'photos/voluntariados/granja-escuela/IMG_1362.jpeg',
+  'photos/voluntariados/granja-escuela/IMG_1396.jpeg',
+  'photos/voluntariados/granja-escuela/IMG_1409.jpeg',
+  'photos/voluntariados/granja-escuela/IMG_1428.jpeg',
+  'photos/voluntariados/granja-escuela/IMG_1434.jpeg',
+  'photos/voluntariados/granja-escuela/IMG_1441.jpeg',
+  'photos/voluntariados/granja-escuela/IMG_1462.jpeg',
+  'photos/voluntariados/granja-escuela/IMG_1464.jpeg',
+];
+
+const hipicaMedia = [
+  'photos/voluntariados/hipica/IMG_4413.JPG',
+  'photos/voluntariados/hipica/IMG_6453.jpeg',
+  'photos/voluntariados/hipica/IMG_4075.MOV',
+  'photos/voluntariados/hipica/IMG_4543.mov',
+  'photos/voluntariados/hipica/copy_63E60EE9-9C65-4134-8327-1B7C342EB6B7%202.mov',
+];
+
 /* ── Lightbox ── */
 let lbPhotos = [], lbIdx = 0;
 
