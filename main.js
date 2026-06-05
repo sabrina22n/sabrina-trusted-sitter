@@ -102,6 +102,15 @@ const merlinaPhotos = [
   'photos/merlina/d1ca7e4f-0e14-4c66-a413-167a6200927e.jpg',
 ];
 
+const chloePhotos = [
+  'photos/chloé-miuccia/WhatsApp Image 2026-06-05 at 15.45.34 (1).jpeg',
+  'photos/chloé-miuccia/WhatsApp Image 2026-06-05 at 15.45.34 (2).jpeg',
+  'photos/chloé-miuccia/WhatsApp Image 2026-06-05 at 15.45.34 (3).jpeg',
+  'photos/chloé-miuccia/WhatsApp Image 2026-06-05 at 15.45.35.jpeg',
+  'photos/chloé-miuccia/WhatsApp Image 2026-06-05 at 15.45.35 (1).jpeg',
+  'photos/chloé-miuccia/WhatsApp Image 2026-06-05 at 16.00.55.jpeg',
+];
+
 const candidaMedia = [
   'photos/voluntariados/santuario-lacandela/IMG_8354.jpeg',
   'photos/voluntariados/santuario-lacandela/IMG_8242.jpeg',
