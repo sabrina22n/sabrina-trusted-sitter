@@ -1,111 +1,391 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sabrina — Trusted Housesitter Application</title>
-        <!-- Fonts: serif, sans and cursive -->
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabrina — Pet Sitter & Animal Lover</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <h1 class="brand">Sabrina Nunez — Pet Carer</h1>
-            <nav class="nav">
-                <a href="#about">Sobre mí</a>
-                <a href="#pets">Mascotas</a>
-                <a href="#voluntariados">Voluntariados</a>
-                <a href="#contact">Contacto</a>
-            </nav>
+
+<!-- ── NAVIGATION ──────────────────────────────── -->
+<nav>
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-icon">🐾</div>
+    <span class="nav-logo-text">Sabrina</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#pets">Pets</a></li>
+    <li><a href="#volunteering">Volunteering</a></li>
+    <li><a href="https://www.trustedhousesitters.com" target="_blank" rel="noopener" class="nav-cta">TrustedHouseSitters</a></li>
+  </ul>
+
+  <button class="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about"         onclick="toggleMenu()">About</a>
+  <a href="#pets"          onclick="toggleMenu()">Pets</a>
+  <a href="#volunteering"  onclick="toggleMenu()">Volunteering</a>
+  <a href="https://www.trustedhousesitters.com" target="_blank" rel="noopener">TrustedHouseSitters ↗</a>
+</div>
+
+<!-- ── HERO ────────────────────────────────────── -->
+<div class="hero-wrap" id="home">
+  <div class="hero">
+    <!-- Left: text -->
+    <div class="hero-text reveal">
+      <div class="hero-badge">🐶 Pet Sitter &amp; Animal Lover</div>
+      <h1 class="hero-title">
+        With me,<br>your pet is <em>family.</em>
+      </h1>
+      <p class="hero-sub">
+        Hi, I'm Sabrina! I've spent years caring for dogs, cats, horses, and farm animals — giving each one the love, attention, and daily routine they deserve, even when their owners are away.
+      </p>
+      <div class="hero-btns">
+        <a href="#pets" class="btn btn-primary">Meet my furry friends →</a>
+        <a href="#about" class="btn btn-outline">About me</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-n">8+</div>
+          <div class="stat-l">Pets cared for</div>
         </div>
-    </header>
-
-    <main>
-        <section id="hero" class="hero">
-            <!-- big background image to make the hero more visual -->
-            <div class="hero-bg" style="background-image:url('photos/home/IMG_2576.jpeg')" aria-hidden="true"></div>
-            <div class="container hero-inner">
-                <div class="hero-copy">
-                    <h2 class="display">Find your perfect match — <span class="script">Pet care you can trust</span></h2>
-                    <p class="lead">Profesional y cariñosa con mascotas de todas las edades. Experiencia en cuidados diarios, alojamiento y acompañamiento en viajes.</p>
-                    <div class="hero-ctas">
-                        <a class="btn primary" href="#pets">Ver mis mascotas</a>
-                        <a class="btn ghost" href="#voluntariados">Ver voluntariados</a>
-                    </div>
-                </div>
-                <div class="hero-media">
-                    <div id="hero-carousel" class="carousel">
-                        <img src="photos/home/IMG_8207.jpeg" alt="home photo 1">
-                        <img src="photos/home/IMG_8357.jpeg" alt="home photo 2">
-                        <img src="photos/home/IMG_4787.jpeg" alt="home photo 3">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about container">
-            <div class="about-inner">
-                <div class="about-photo">
-                    <img src="photos/me/34360031.JPG" alt="Sabrina" />
-                </div>
-                <div class="about-copy">
-                    <h3>Sobre mí</h3>
-                    <p>Soy Sabrina, cuidadora de mascotas con años de experiencia atendiendo perros, gatos y animales en voluntariados. Responsable, puntual y con mucha paciencia. Me encanta conocer cada personalidad y adaptarme a las rutinas de cada hogar.</p>
-                    <ul>
-                        <li>Cuidados diarios y paseo</li>
-                        <li>Administración de medicación básica</li>
-                        <li>Experiencia con animales nerviosos o mayores</li>
-                        <li>Voluntariados en granjas y santuarios</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="pets" class="pets container">
-            <h3>Las mascotas que he cuidado</h3>
-            <p class="muted">Haz click en una tarjeta para ver más fotos o videos.</p>
-            <div id="pet-list" class="pet-list">
-                <!-- Pet cards inserted by JS -->
-            </div>
-        </section>
-
-        <section id="voluntariados" class="voluntariados container">
-            <h3>Voluntariados</h3>
-            <div class="vol-grid">
-                <article class="vol-item">
-                    <img src="photos/voluntariados/granja-escuela/IMG_1355.jpeg" alt="Granja escuela">
-                    <h4>Granja Escuela</h4>
-                    <p>Trabajé en cuidado de animales y actividades educativas con niños.</p>
-                </article>
-                <article class="vol-item">
-                    <img src="photos/voluntariados/hipica/IMG_6453.jpeg" alt="Hipica">
-                    <h4>Hípica</h4>
-                    <p>Apoyo en manejo y cuidados de caballos, limpieza y alimentación.</p>
-                </article>
-                <article class="vol-item">
-                    <img src="photos/voluntariados/santuario-lacandela/IMG_8242.jpeg" alt="Santuario Lacandela">
-                    <h4>Santuario Lacandela</h4>
-                    <p>Atención a animales rescatados, limpieza de instalaciones y apoyo sanitario básico.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="contact" class="contact container">
-            <h3>Contacto</h3>
-            <p>Puedes contactarme por email: <a href="mailto:sabrina@example.com">sabrina@example.com</a> — o por teléfono: <strong>+44 7700 900123</strong></p>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">© Sabrina Nunez — Pet Carer</div>
-    </footer>
-
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-        <button id="close-lightbox" class="lightbox-close">✕</button>
-        <div class="lightbox-content"></div>
+        <div>
+          <div class="stat-n">3</div>
+          <div class="stat-l">Volunteer programs</div>
+        </div>
+        <div>
+          <div class="stat-n">100%</div>
+          <div class="stat-l">With love</div>
+        </div>
+      </div>
     </div>
 
-    <script src="script.js" defer></script>
+    <!-- Right: photo mosaic -->
+    <div class="hero-mosaic reveal" style="transition-delay:.15s">
+      <div class="mosaic-item mosaic-tall">
+        <video autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
+          <source src="photos/home/IMG_8224.MOV" type="video/mp4">
+        </video>
+      </div>
+      <div class="mosaic-item">
+        <img src="photos/home/IMG_1643.JPG" alt="Cute dogs">
+      </div>
+      <div class="mosaic-item">
+        <img src="photos/home/IMG_4787.jpeg" alt="Happy pet">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PHOTO STRIP ──────────────────────────────── -->
+<div class="strip">
+  <div class="strip-inner">
+    <img src="photos/home/IMG_2576.jpeg"  class="strip-img" alt="">
+    <img src="photos/home/IMG_8357.jpeg"  class="strip-img" alt="">
+    <img src="photos/pampa/IMG_9413.jpeg" class="strip-img" alt="">
+    <img src="photos/paris/IMG_0685.jpeg" class="strip-img" alt="">
+    <img src="photos/picu/IMG_7410.jpeg"  class="strip-img" alt="">
+  </div>
+</div>
+
+<!-- ── ABOUT ────────────────────────────────────── -->
+<section class="about-bg" id="about">
+  <div class="section">
+    <div class="about-inner">
+
+      <!-- Photo -->
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo-deco"></div>
+        <img src="photos/me/34360031.JPG" alt="Sabrina" class="about-photo">
+      </div>
+
+      <!-- Text -->
+      <div class="about-body reveal" style="transition-delay:.2s">
+        <span class="tag">About me</span>
+        <h2 class="section-title">A lifelong passion<br>for <em>animals</em></h2>
+        <p>
+          I'm Sabrina, and animals have always been the most important part of my life. Growing up, I learned that the bond between a person and their pet is something truly special — and I've dedicated time and effort to honour that bond every time I care for someone's beloved companion.
+        </p>
+        <p>
+          I offer calm, attentive, and personalised care — following each pet's existing routine so they feel safe and comfortable. Whether it's long walks, playtime, cuddle sessions, or just quiet company, I adapt to what each animal needs.
+        </p>
+        <div class="about-highlights">
+          <div class="hl-item">
+            <span class="hl-icon">🐕</span>
+            <span class="hl-text">Experienced with dogs of all sizes &amp; temperaments</span>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">🐈</span>
+            <span class="hl-text">Comfortable with cats and their independent nature</span>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">🐴</span>
+            <span class="hl-text">Volunteer experience with horses &amp; farm animals</span>
+          </div>
+          <div class="hl-item">
+            <span class="hl-icon">🏠</span>
+            <span class="hl-text">Treats every home and pet with the utmost respect</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PETS ─────────────────────────────────────── -->
+<section class="pets-bg" id="pets">
+  <div class="section">
+    <div class="pets-header">
+      <div>
+        <span class="tag">Pets I've cared for</span>
+        <h2 class="section-title">My furry <em>friends</em></h2>
+      </div>
+      <p style="font-size:.9375rem;color:var(--dark);opacity:.65;max-width:320px;line-height:1.6;">
+        Click any photo to open the full gallery and see all the memories we made together.
+      </p>
+    </div>
+
+    <div class="pets-grid">
+
+      <!-- PAMPA -->
+      <div class="pet-card reveal">
+        <div class="pet-card-img-wrap">
+          <img id="pampa-cover" src="photos/pampa/IMG_9370.jpeg" alt="Pampa" class="pet-card-img"
+               onclick="lb_open(pampaPhotos, 0)">
+        </div>
+        <div class="pet-card-body">
+          <div class="pet-type">French Bulldog · Dog</div>
+          <div class="pet-name">Pampa</div>
+          <div class="pet-desc">A spirited French Bulldog with a huge personality. Pampa loves playtime, indoor cuddles, and always demands the best belly rubs.</div>
+          <div class="pet-thumbs">
+            <img src="photos/pampa/IMG_9370.jpeg"  class="pet-thumb" onclick="lb_open(pampaPhotos,0)"  alt="">
+            <img src="photos/pampa/IMG_9387.jpeg"  class="pet-thumb" onclick="lb_open(pampaPhotos,1)"  alt="">
+            <img src="photos/pampa/IMG_9409.jpeg"  class="pet-thumb" onclick="lb_open(pampaPhotos,2)"  alt="">
+            <img src="photos/pampa/IMG_2235.jpeg"  class="pet-thumb" onclick="lb_open(pampaPhotos,3)"  alt="">
+            <div class="pet-more"  onclick="lb_open(pampaPhotos,0)">+8</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PARIS -->
+      <div class="pet-card reveal" style="transition-delay:.08s">
+        <div class="pet-card-img-wrap">
+          <img id="paris-cover" src="photos/paris/IMG_0321.jpeg" alt="Paris" class="pet-card-img"
+               onclick="lb_open(parisPhotos, 0)">
+        </div>
+        <div class="pet-card-body">
+          <div class="pet-type">Dog</div>
+          <div class="pet-name">Paris</div>
+          <div class="pet-desc">A majestic, long-haired dog with a loving soul. Paris adores outdoor adventures, park walks, and endless affection.</div>
+          <div class="pet-thumbs">
+            <img src="photos/paris/IMG_0321.jpeg"  class="pet-thumb" onclick="lb_open(parisPhotos,0)"  alt="">
+            <img src="photos/paris/IMG_0331.jpeg"  class="pet-thumb" onclick="lb_open(parisPhotos,1)"  alt="">
+            <img src="photos/paris/IMG_0680.jpeg"  class="pet-thumb" onclick="lb_open(parisPhotos,2)"  alt="">
+            <img src="photos/paris/IMG_0718.jpeg"  class="pet-thumb" onclick="lb_open(parisPhotos,3)"  alt="">
+            <div class="pet-more" onclick="lb_open(parisPhotos,0)">+10</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SALEM & MERLIN -->
+      <div class="pet-card reveal" style="transition-delay:.16s">
+        <div class="pet-card-img-wrap">
+          <img id="salem-cover" src="photos/salem-merlin/IMG_5241.jpeg" alt="Salem & Merlin" class="pet-card-img"
+               onclick="lb_open(salemPhotos, 0)">
+        </div>
+        <div class="pet-card-body">
+          <div class="pet-type">Poodle Mix · Dogs</div>
+          <div class="pet-name">Salem &amp; Merlin</div>
+          <div class="pet-desc">An inseparable duo — one white, one dark. Full of energy and mischief, they make every single day a tiny adventure.</div>
+          <div class="pet-thumbs">
+            <img src="photos/salem-merlin/IMG_2039.jpeg"  class="pet-thumb" onclick="lb_open(salemPhotos,0)"  alt="">
+            <img src="photos/salem-merlin/IMG_4062.jpeg"  class="pet-thumb" onclick="lb_open(salemPhotos,1)"  alt="">
+            <img src="photos/salem-merlin/IMG_5241.jpeg"  class="pet-thumb" onclick="lb_open(salemPhotos,2)"  alt="">
+            <img src="photos/salem-merlin/IMG_3782.jpeg"  class="pet-thumb" onclick="lb_open(salemPhotos,3)"  alt="">
+            <div class="pet-more" onclick="lb_open(salemPhotos,0)">+17</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PICU -->
+      <div class="pet-card reveal">
+        <div class="pet-card-img-wrap">
+          <img id="picu-cover" src="photos/picu/IMG_0279.jpeg" alt="Picu" class="pet-card-img"
+               onclick="lb_open(picuPhotos, 0)">
+        </div>
+        <div class="pet-card-body">
+          <div class="pet-type">Maltese Mix · Dog</div>
+          <div class="pet-name">Picu</div>
+          <div class="pet-desc">A gentle little cloud of fur who loves being close to her people. Picu is calm, sweet, and the perfect lap companion.</div>
+          <div class="pet-thumbs">
+            <img src="photos/picu/IMG_0279.jpeg"  class="pet-thumb" onclick="lb_open(picuPhotos,0)"  alt="">
+            <img src="photos/picu/IMG_1275.jpeg"  class="pet-thumb" onclick="lb_open(picuPhotos,1)"  alt="">
+            <img src="photos/picu/IMG_4398.jpeg"  class="pet-thumb" onclick="lb_open(picuPhotos,2)"  alt="">
+            <img src="photos/picu/IMG_5996.jpeg"  class="pet-thumb" onclick="lb_open(picuPhotos,3)"  alt="">
+            <div class="pet-more" onclick="lb_open(picuPhotos,0)">+5</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TYRONE -->
+      <div class="pet-card reveal" style="transition-delay:.08s">
+        <div class="pet-card-img-wrap">
+          <img id="tyrone-cover" src="photos/tyrone/IMG_0188.jpeg" alt="Tyrone" class="pet-card-img"
+               onclick="lb_open(tyronePhotos, 0)">
+        </div>
+        <div class="pet-card-body">
+          <div class="pet-type">Dog</div>
+          <div class="pet-name">Tyrone</div>
+          <div class="pet-desc">A relaxed and laid-back dog who loves nothing more than cosy lounging. Calm, easygoing, and wonderfully affectionate at home.</div>
+          <div class="pet-thumbs">
+            <img src="photos/tyrone/IMG_0188.jpeg"  class="pet-thumb" onclick="lb_open(tyronePhotos,0)"  alt="">
+            <img src="photos/tyrone/IMG_0266.jpeg"  class="pet-thumb" onclick="lb_open(tyronePhotos,1)"  alt="">
+            <img src="photos/tyrone/IMG_0529.jpeg"  class="pet-thumb" onclick="lb_open(tyronePhotos,2)"  alt="">
+            <img src="photos/tyrone/IMG_4224.jpeg"  class="pet-thumb" onclick="lb_open(tyronePhotos,3)"  alt="">
+            <div class="pet-more" onclick="lb_open(tyronePhotos,0)">+4</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ISHA -->
+      <div class="pet-card reveal" style="transition-delay:.16s">
+        <div class="pet-card-img-wrap">
+          <img id="isha-cover" src="photos/Isha/IMG_8485.jpeg" alt="Isha" class="pet-card-img"
+               onclick="lb_open(ishaPhotos, 0)">
+        </div>
+        <div class="pet-card-body">
+          <div class="pet-type">Dog</div>
+          <div class="pet-name">Isha</div>
+          <div class="pet-desc">A handsome, adventurous dog who thrives on long walks and outdoor exploration. Loyal, well-behaved, and an absolute joy every day.</div>
+          <div class="pet-thumbs">
+            <img src="photos/Isha/IMG_8485.jpeg"                            class="pet-thumb" onclick="lb_open(ishaPhotos,0)"  alt="">
+            <img src="photos/Isha/IMG_0587.jpeg"                            class="pet-thumb" onclick="lb_open(ishaPhotos,1)"  alt="">
+            <img src="photos/Isha/IMG_5506.jpeg"                            class="pet-thumb" onclick="lb_open(ishaPhotos,2)"  alt="">
+            <img src="photos/Isha/4AED476C-E33D-416C-B981-A3B157968F85.jpg" class="pet-thumb" onclick="lb_open(ishaPhotos,3)"  alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- MERLINA -->
+      <div class="pet-card reveal" style="transition-delay:.16s">
+        <div class="pet-card-img-wrap">
+          <img id="merlina-cover" src="photos/merlina/IMG_0861.jpeg" alt="Merlina" class="pet-card-img"
+               onclick="lb_open(merlinaPhotos, 0)">
+        </div>
+        <div class="pet-card-body">
+          <div class="pet-type">Bichón · Dog</div>
+          <div class="pet-name">Merlina</div>
+          <div class="pet-desc">A fluffy white Bichón Frisé with the most adorable little bows. Merlina is playful, sweet, and impossible not to fall in love with instantly.</div>
+          <div class="pet-thumbs">
+            <img src="photos/merlina/IMG_0861.jpeg" class="pet-thumb" onclick="lb_open(merlinaPhotos,0)" alt="">
+            <img src="photos/merlina/IMG_0971.jpeg" class="pet-thumb" onclick="lb_open(merlinaPhotos,1)" alt="">
+            <img src="photos/merlina/IMG_1293.jpeg" class="pet-thumb" onclick="lb_open(merlinaPhotos,2)" alt="">
+            <img src="photos/merlina/IMG_1314.jpeg" class="pet-thumb" onclick="lb_open(merlinaPhotos,3)" alt="">
+            <div class="pet-more" onclick="lb_open(merlinaPhotos,0)">+4</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KIT -->
+      <div class="pet-card reveal">
+        <div class="pet-card-img-wrap">
+          <img id="cat-cover" src="photos/kit/IMG_4539.JPG" alt="Calico cat" class="pet-card-img"
+               onclick="lb_open(catPhotos, 0)">
+        </div>
+        <div class="pet-card-body">
+          <div class="pet-type">Cat</div>
+          <div class="pet-name">Kit</div>
+          <div class="pet-desc">A beautiful calico with striking markings and a personality as big as her heart. She knows exactly how to melt you with one look.</div>
+          <div class="pet-thumbs">
+            <img src="photos/kit/IMG_4539.JPG"   class="pet-thumb" onclick="lb_open(catPhotos,0)" alt="">
+            <img src="photos/kit/IMG_5338.jpeg"  class="pet-thumb" onclick="lb_open(catPhotos,1)" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── VOLUNTEERING ─────────────────────────────── -->
+<section class="vol-bg" id="volunteering">
+  <div class="section">
+    <span class="tag">Volunteer work</span>
+    <h2 class="section-title">Giving back to <em>animals</em></h2>
+    <p class="vol-sub">Beyond pet sitting, I dedicate time to organisations that work tirelessly for animal welfare.</p>
+
+    <div class="vol-grid">
+
+      <!-- Santuario La Candela -->
+      <div class="vol-card reveal">
+        <img src="photos/voluntariados/santuario-lacandela/IMG_8354.jpeg" alt="Santuario La Candela" class="vol-card-img">
+        <div class="vol-card-body">
+          <div class="vol-card-tag">🏠 Animal Sanctuary</div>
+          <div class="vol-card-name">Santuario La Candela</div>
+          <div class="vol-card-desc">
+            Volunteered at this animal rescue sanctuary, walking dogs, socialising cats, and providing daily care to animals awaiting their forever homes. A profoundly rewarding experience.
+          </div>
+        </div>
+      </div>
+
+      <!-- Granja Escuela -->
+      <div class="vol-card reveal" style="transition-delay:.1s">
+        <img src="photos/voluntariados/granja-escuela/IMG_1399.jpeg" alt="Granja Escuela" class="vol-card-img">
+        <div class="vol-card-body">
+          <div class="vol-card-tag">🌿 Educational Farm</div>
+          <div class="vol-card-name">Granja Escuela</div>
+          <div class="vol-card-desc">
+            Helped care for goats, sheep, and other farm animals at this educational farm. Learning the daily rhythms of farm life deepened my connection with animals in a whole new way.
+          </div>
+        </div>
+      </div>
+
+      <!-- Hípica -->
+      <div class="vol-card reveal" style="transition-delay:.2s">
+        <img src="photos/voluntariados/hipica/IMG_6453.jpeg" alt="Hípica" class="vol-card-img">
+        <div class="vol-card-body">
+          <div class="vol-card-tag">🐴 Equestrian Centre</div>
+          <div class="vol-card-name">Hípica</div>
+          <div class="vol-card-desc">
+            Volunteered at a local equestrian centre — grooming horses, cleaning stables, and assisting with rides. This experience gave me a deep appreciation for these magnificent animals.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────── -->
+<footer>
+  <div class="footer-logo">🐾 Sabrina</div>
+  <p class="footer-tagline">Passionate pet sitter — available through TrustedHouseSitters</p>
+  <a href="https://www.trustedhousesitters.com" target="_blank" rel="noopener" class="footer-cta">
+    View my profile on TrustedHouseSitters ↗
+  </a>
+  <p class="footer-copy">Made with love for every pet I've ever cared for.</p>
+</footer>
+
+<!-- ── LIGHTBOX ─────────────────────────────────── -->
+<div class="lb" id="lightbox" onclick="lb_bgclose(event)">
+  <button class="lb-btn lb-close" onclick="lb_close()" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev"  onclick="lb_nav(-1)"  aria-label="Previous">‹</button>
+  <img   id="lb-img"   class="lb-img" src="" alt="">
+  <video id="lb-video" class="lb-img" controls playsinline style="display:none;max-width:min(88vw,900px);max-height:82vh;border-radius:1rem;"></video>
+  <button class="lb-btn lb-next"  onclick="lb_nav(1)"   aria-label="Next">›</button>
+  <div class="lb-counter" id="lb-counter"></div>
+</div>
+
+<script src="main.js"></script>
+
 </body>
 </html>
