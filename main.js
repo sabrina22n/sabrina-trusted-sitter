@@ -86,6 +86,23 @@ const ishaPhotos = [
   'photos/Isha/IMG_0516.jpeg',
 ];
 
+const greystripePhotos = [
+  'photos/Greystripe/IMG_3956.jpeg',
+  'photos/Greystripe/IMG_3969.jpeg',
+  'photos/Greystripe/IMG_3971.jpeg',
+  'photos/Greystripe/IMG_3974.jpeg',
+  'photos/Greystripe/IMG_3978.jpeg',
+  'photos/Greystripe/IMG_3993.jpeg',
+  'photos/Greystripe/IMG_4005.jpeg',
+  'photos/Greystripe/IMG_4326.jpeg',
+  'photos/Greystripe/IMG_4473.jpeg',
+  'photos/Greystripe/IMG_4679.jpeg',
+  'photos/Greystripe/IMG_4885.jpeg',
+  'photos/Greystripe/IMG_4905.jpeg',
+  'photos/Greystripe/IMG_4916.jpeg',
+  'photos/Greystripe/WhatsApp Image 2026-06-18 at 12.26.23.jpeg',
+];
+
 const catPhotos = [
   'photos/kit/IMG_4539.JPG',
   'photos/kit/IMG_5338.jpeg',
