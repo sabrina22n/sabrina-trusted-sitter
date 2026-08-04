@@ -103,6 +103,24 @@ const greystripePhotos = [
   'photos/Greystripe/WhatsApp Image 2026-06-18 at 12.26.23.jpeg',
 ];
 
+const drePhotos = [
+  'photos/dre/1.jpeg',
+  'photos/dre/2.jpeg',
+  'photos/dre/IMG_6658.jpeg',
+  'photos/dre/IMG_6745.jpeg',
+  'photos/dre/IMG_6769.jpeg',
+  'photos/dre/IMG_6848.jpeg',
+  'photos/dre/IMG_6978.jpeg',
+  'photos/dre/IMG_6989.jpeg',
+  'photos/dre/IMG_7025.jpeg',
+  'photos/dre/IMG_7491.jpeg',
+  'photos/dre/IMG_7501.jpeg',
+  'photos/dre/IMG_7507.jpeg',
+  'photos/dre/IMG_7521.jpeg',
+  'photos/dre/IMG_7743.jpeg',
+  'photos/dre/IMG_7964.jpeg',
+];
+
 const catPhotos = [
   'photos/kit/IMG_4539.JPG',
   'photos/kit/IMG_5338.jpeg',
